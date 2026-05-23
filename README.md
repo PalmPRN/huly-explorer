@@ -14,11 +14,34 @@ It provides complete examples of using both the **WebSocket client** (persistent
 
 ---
 
-## Installation
+## Quick Start & Setup
+
+The easiest way to get started is by running the cross-platform setup and launcher scripts. These scripts verify Node.js is installed, set up your configuration file, install required dependencies, and launch the interactive dashboard.
+
+### macOS & Linux
+Run the launcher script [run.sh](file:///Users/phiriya.ntmp/Work/huly-explorer/run.sh):
+```bash
+./run.sh
+```
+
+### Windows
+Run the batch script [run.bat](file:///Users/phiriya.ntmp/Work/huly-explorer/run.bat):
+```cmd
+run.bat
+```
+
+> [!NOTE]
+> On the first run, the dashboard will prompt you interactively to input your Huly instance URL, Workspace ID, and authentication details, and then save them to a local [`.env`](file:///Users/phiriya.ntmp/Work/huly-explorer/.env) file automatically.
+
+---
+
+## Manual Setup (Alternative)
+
+If you prefer to configure the workspace manually, follow these steps:
 
 ### Prerequisites
 - **Node.js** (v18 or higher recommended)
-- **Huly Instance**: Either a self-hosted local instance (e.g., `http://localhost:8087`) or a workspace on the Huly Cloud (`https://huly.app`).
+- **Huly Instance**: Either a self-hosted local instance or a workspace on Huly Cloud (`https://huly.app`).
 
 ### Set Up Project
 1. Install the workspace dependencies:
@@ -26,15 +49,20 @@ It provides complete examples of using both the **WebSocket client** (persistent
    npm install
    ```
 
-2. Copy the `.env.example` file to `.env`:
+2. Copy the configuration template [`.env.example`](file:///Users/phiriya.ntmp/Work/huly-explorer/.env.example) to [`.env`](file:///Users/phiriya.ntmp/Work/huly-explorer/.env):
    ```bash
    cp .env.example .env
    ```
 
-3. Open `.env` and configure your credentials:
-   - **`HULY_URL`**: Your Huly instance url (e.g., `https://huly.app` or `http://localhost:8087`).
-   - **`HULY_WORKSPACE`**: The url name of your workspace. Find it in your browser address bar: `https://huly.app/workbench/<workspace-name>`.
+3. Open the newly created [`.env`](file:///Users/phiriya.ntmp/Work/huly-explorer/.env) file and configure your credentials:
+   - **`HULY_URL`**: Your Huly instance URL (e.g., `https://huly.app`).
+   - **`HULY_WORKSPACE`**: The active workspace ID (found in your browser URL bar).
    - **Authentication**: Either configure a personal access token (`HULY_TOKEN`) OR use your workbench email and password (`HULY_EMAIL` & `HULY_PASSWORD`).
+
+4. Launch the interactive CLI:
+   ```bash
+   npm run cli
+   ```
 
 ---
 

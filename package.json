@@ -1,0 +1,28 @@
+{
+  "name": "huly-api-integration",
+  "version": "1.0.0",
+  "description": "Integration with Huly Platform API using TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node --transpile-only src/cli.ts",
+    "cli": "ts-node --transpile-only src/cli.ts",
+    "start:ws": "ts-node src/client-websocket.ts",
+    "start:rest": "ts-node src/client-rest.ts",
+    "export:csv": "ts-node --transpile-only src/export-csv.ts"
+  },
+  "dependencies": {
+    "@hcengineering/api-client": "^0.7.413",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.4.5",
+    "ora": "^5.4.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/prompts": "^2.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
