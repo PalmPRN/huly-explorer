@@ -276,7 +276,7 @@ async function main() {
   while (true) {
     console.clear();
     console.log(chalk.bold.cyan('====================================================='));
-    console.log(chalk.bold.cyan('             HULY INTERACTIVE TERMINAL CLI           '));
+    console.log(chalk.bold.cyan('             HULY EXPLORER TERMINAL CLI           '));
     console.log(chalk.bold.cyan('====================================================='));
 
     // Print active filters state
